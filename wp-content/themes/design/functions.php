@@ -27,22 +27,23 @@ add_action('wp_enqueue_scripts', 'MyWebSite_script_enqueue');
   ===============================
  */
 
-function design_theme_setup() {
+function mywebsite_theme_setup() {
     add_theme_support('menus');
     register_nav_menu('primary', 'primary header navigation');
-    register_nav_menu('secondary', 'secondary header Navigation');
+    register_nav_menu('secondary', 'Footer Navigation');
 }
 
-add_action('init', 'design_theme_setup');
+add_action('init', 'mywebsite_theme_setup');
 /*
   ===============================
   Theme Suport SetUp
   ===============================
  */
-add_theme_support('custom-background');
+//add_theme_support('custom-background');
 add_theme_support('custom-header');
 add_theme_support('post-thumbnails');
-add_theme_support('post-formats', array('aside', 'image', 'video'));
+add_theme_support('post-formats', array('aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',));
+
 
 /*
   ===============================
@@ -50,20 +51,147 @@ add_theme_support('post-formats', array('aside', 'image', 'video'));
   ===============================
  */
 
-function design_sidebar() {
+function mywebsite_sidebar() {
+
     register_sidebar(
             array(
                 'name' => 'Sidebar',
                 'id' => 'sidebar-1',
                 'class' => 'custom',
-                'description' => 'standared',
-                'before_widget' => '<li id="%1$s" class="widget %2$s">',
-                'after_widget' => '</li>',
-                'before_title' => '<h2 class="widgettitle">',
-                'after_title' => '</h2>',
+                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+                'after_widget' => '</aside>',
+                'before_title' => '<h1 class="widget-title">',
+                'after_title' => '</h1>',
             )
     );
+    register_sidebar(array(
+        'name' => 'Content Sidebar',
+        'id' => 'sidebar-2',
+        'description' => 'custome',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Footer Widget LeftArea',
+        'id' => 'sidebar-3',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Footer Widget RightArea',
+        'id' => 'sidebar-4',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Responsive Slider-1',
+        'id' => 'sidebar-5',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Responsive Slider-2',
+        'id' => 'sidebar-6',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Responsive Slider-3',
+        'id' => 'sidebar-7',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Amazing Title',
+        'id' => 'sidebar-8',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Google Map',
+        'id' => 'sidebar-9',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Header Slider-1',
+        'id' => 'sidebar-10',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Header Slider-2',
+        'id' => 'sidebar-11',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
+    register_sidebar(array(
+        'name' => 'Header Slider-3',
+        'id' => 'sidebar-12',
+        'description' => 'custom',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h1 class="widget-title">',
+        'after_title' => '</h1>',
+    ));
 }
 
-add_action('widgets_init', 'design_sidebar');
+add_action('widgets_init', 'mywebsite_sidebar');
 
+
+//function prowp_register_my_post_types() {
+//    register_post_type('products', array(
+//        'labels' => array(
+//            'name' => 'Products',
+//            'singular_name' => 'Product',
+//            'add_new' => 'Add New Product',
+//            'add_new_item' => 'Add New Product',
+//            'edit_item' => 'Edit Product',
+//            'new_item' => 'New Product',
+//            'all_items' => 'All Products',
+//            'view_item' => 'View Product',
+//            'search_items' => 'Search Products',
+//            'not_found' => 'No products found',
+//            'not_found_in_trash' => 'No products found in Trash',
+//            'parent_item_colon' => '',
+//            'menu_name' => 'Products'
+//        ),
+//        'public' => true,
+//        'has_archive' => true,
+//        'taxonomies' => array('category'),
+//        'rewrite' => array('slug' => 'product'),
+//        'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments')
+//            )
+//    );
+//}
+//
+//add_action('init', 'prowp_register_my_post_types');

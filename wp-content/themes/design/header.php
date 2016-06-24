@@ -14,13 +14,15 @@
  
     <body class="size-1140">
     
-        <!-- TOP NAV WITH LOGO -->  
+         
         <header>
             <nav>
                 <div class="line">
                     <div class="top-nav">              
                         <div id="sidebar" class="widget-area logo hide-l">
                             <a href=""> <?php dynamic_sidebar('sidebar-1'); ?></a>
+                            <a href=""> <?php dynamic_sidebar('sidebar-2'); ?></a>
+                            
                         </div>                
                         <p class="nav-text">Custom menu text</p>
                         <div class="top-nav s-12 l-5">
@@ -56,6 +58,9 @@
                 </div>
             </nav>
         </header>
+          <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>"
+                 width="<?php echo get_custom_header()->width; ?>" alt="" />
+
         
          
 
