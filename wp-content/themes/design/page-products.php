@@ -2,7 +2,7 @@
 <section>
     <div id="head">
         <div class="line">
-            <h1>Some long page title</h1>
+            <h1><?php dynamic_sidebar('sidebar-10'); ?></h1>
         </div>
     </div>
     <div id="content">

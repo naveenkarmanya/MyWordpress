@@ -2,7 +2,7 @@
 <section>
     <div id="head">
         <div class="line">
-            <h1>Responsive image gallery</h1>
+            <h1><?php dynamic_sidebar('sidebar-11'); ?></h1>
         </div>
     </div>
     <div id="content">

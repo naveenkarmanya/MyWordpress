@@ -11,9 +11,9 @@
                 <div class="s-12 l-6">
                     <h2>Vision Design - graphic zoo</h2>
                     <address>
-                        <p><i class="icon-home icon"></i> Gallayova 19, 841 02 Bratislava</p>
-                        <p><i class="icon-globe_black icon"></i> Slovakia - Europe</p>
-                        <p><i class="icon-mail icon"></i> info@visiondesign.sk</p>
+                        <p><i class="icon-home icon"></i> IIIT Campus , Gachibowli, Hyderabad,T-HUB </p>
+                        <p><i class="icon-globe_black icon"></i> Telangana 500032 - India</p>
+                        <p><i class="icon-mail icon"></i> info@t-hub.ask</p>
                     </address>
                     <br />
                     <h2>Social</h2>
@@ -23,13 +23,13 @@
                 </div>
                 <div class="s-12 l-6">
                     <h2>Example contact form (do not use)</h2>
-                    <form class="form-inline">
+                    
                         <div class="s-12 l-7">
-                            <?php echo do_shortcode(' [contact-form-7 id="66" title="Contact form 1"]'); ?>
+                            <?php echo do_shortcode('[contact-form-7 id="42" title="Contact form 1"]'); ?>
 
                         </div>
 
-                    </form>
+                    
                 </div>
             </div>
         </div>

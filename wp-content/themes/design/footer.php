@@ -1,11 +1,11 @@
 <section>
     <!-- CAROUSEL -->  
     
-      <!--?php echo do_shortcode(' [soliloquy id="119"] '); ? -->
+      <?php echo do_shortcode(' [huge_it_slider id="1"] '); ?>
    
    
 
-    <div id="carousel">
+<!--    <div id="carousel">
         <div id="owl-demo" class="owl-carousel owl-theme">
             <div class="item">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/first.jpg" alt="">      
@@ -50,11 +50,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- FIRST BLOCK --> 	
     <div id="first-block">
         <div class="line">
-            <h2>Some awesome blocks</h2>
+            <h2><?php dynamic_sidebar('sidebar-2'); ?></h2>
             <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
             </p>
             <div class="margin">

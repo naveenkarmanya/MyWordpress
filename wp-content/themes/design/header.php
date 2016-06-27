@@ -11,12 +11,12 @@
         <!-- CUSTOM STYLE -->  
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/template-style.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
- 
+ <?php wp_head(); ?>
     <body class="size-1140">
     
          
         <header>
-            <nav>
+            <nav class="navbar-fixed-top">
                 <div class="line">
                     <div class="top-nav">              
                         <div id="sidebar" class="widget-area logo hide-l">
@@ -25,7 +25,8 @@
                             
                         </div>                
                         <p class="nav-text">Custom menu text</p>
-                        <div class="top-nav s-12 l-5">
+                       
+                        <div class="top-nav col-md-5 col-md-offset-1">
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'primary',
@@ -33,9 +34,9 @@
                                 'menu_class' => 'nav navbar-nav navbar-right'));
                             ?>
                         </div>
-                        <ul class="s-12 l-2"  style="background-color: #7bcaea;">
+                       
 
-                            <div id="blogname">
+                            <div id="" class="col-md-2"  style="background-color: #7bcaea;">
                                 <h1><a href="<?php bloginfo('siteurl'); ?>/" 
                                        title="<?php bloginfo('name'); ?>">
                                            <?php bloginfo('name'); ?>
@@ -45,8 +46,8 @@
 
                             </div>
 
-                        </ul>
-                        <div class="top-nav s-12 l-5">
+                        
+                        <div class="top-nav col-xs-4">
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'secondary',
@@ -54,6 +55,7 @@
                                 'menu_class' => 'nav navbar-nav navbar-right'));
                             ?>
                         </div>
+                    </div>
                     </div>
                 </div>
             </nav>

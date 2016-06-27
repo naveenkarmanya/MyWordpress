@@ -2,7 +2,7 @@
 <section>
     <div id="head">
         <div class="line">
-            <h1>Amazing responsive theme based on Responsee</h1>
+            <h1><?php dynamic_sidebar('sidebar-12'); ?></h1>
         </div>
     </div>
     <div id="content">
@@ -10,16 +10,37 @@
             <div class="margin">
                 <div class="s-12 m-6 l-4">
                     <div class="content-block margin-bottom">
-                        <i class="icon-paperplane_ico icon2x"></i>
-                        <h3>Lightweight</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        </p>
+                        <i  class="icon-at icon2x"></i>
+                        <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'ternary',
+                                'container' => 'false',
+                               ));
+                            ?>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </p>
                     </div>
                 </div>
                 <div class="s-12 m-6 l-4">
                     <div class="content-block margin-bottom">
-                        <i class="icon-display_screen icon2x"></i>
-                        <h3>Responsive</h3>
+                        <i class="icon-cloud icon2x"></i>
+                        <?php
+                            $newpost = new WP_Query('post.php?post=91&action=edit');
+                            if ($newpost->have_posts()) :
+
+                                while ($newpost->have_posts()) :
+                                    $newpost->the_post();
+                                    ?>
+                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
+
+
+                                    <?php
+                                endwhile;
+
+                            else :
+
+                            endif;
+                            ?>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                         </p>
                     </div>
@@ -27,23 +48,71 @@
                 <div class="s-12 m-6 l-4">
                     <div class="content-block margin-bottom">
                         <i class="icon-heart icon2x"></i>
-                        <h3>Intuitive</h3>
+                        <?php
+                            $newpost = new WP_Query('post=91');
+                            if ($newpost->have_posts()) :
+
+                                while ($newpost->have_posts()) :
+                                    $newpost->the_post();
+                                    ?>
+                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
+
+
+                                    <?php
+                                endwhile;
+
+                            else :
+
+                            endif;
+                            ?>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                         </p>
                     </div>
                 </div>
                 <div class="s-12 m-6 l-4">
                     <div class="content-block margin-bottom">
-                        <i class="icon-attachment icon2x"></i>
-                        <h3>Useful</h3>
+                        <i class="icon-plus icon2x"></i>
+                       <?php
+                            $newpost = new WP_Query('post.php?post=91&action=edit');
+                            if ($newpost->have_posts()) :
+
+                                while ($newpost->have_posts()) :
+                                    $newpost->the_post();
+                                    ?>
+                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
+
+
+                                    <?php
+                                endwhile;
+
+                            else :
+
+                            endif;
+                            ?>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                         </p>
                     </div>
                 </div>
                 <div class="s-12 m-6 l-4">
                     <div class="content-block margin-bottom">
-                        <i class="icon-reorder icon2x"></i>
-                        <h3>Responsive navigation</h3>
+                        <i class="icon-warning icon2x"></i>
+                        <?php
+                            $newpost = new WP_Query('post.php?post=91&action=edit');
+                            if ($newpost->have_posts()) :
+
+                                while ($newpost->have_posts()) :
+                                    $newpost->the_post();
+                                    ?>
+                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
+
+
+                                    <?php
+                                endwhile;
+
+                            else :
+
+                            endif;
+                            ?>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                         </p>
                     </div>
@@ -51,7 +120,23 @@
                 <div class="s-12 m-6 l-4">
                     <div class="content-block margin-bottom">
                         <i class="icon-mail icon2x"></i>
-                        <h3>Responsive components</h3>
+                        <?php
+                            $newpost = new WP_Query('post.php?post=91&action=edit');
+                            if ($newpost->have_posts()) :
+
+                                while ($newpost->have_posts()) :
+                                    $newpost->the_post();
+                                    ?>
+                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
+
+
+                                    <?php
+                                endwhile;
+
+                            else :
+
+                            endif;
+                            ?>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                         </p>
                     </div>
@@ -67,22 +152,22 @@
             </p>
             <div class="margin">
                 <div class="s-12 m-6 l-3">
-                    <img src="img/first-small.jpg">      
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/first-small.jpg">      
                     <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     </p>
                 </div>
                 <div class="s-12 m-6 l-3">
-                    <img src="img/second-small.jpg">      
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/second-small.jpg">      
                     <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     </p>
                 </div>
                 <div class="s-12 m-6 l-3">
-                    <img src="img/third-small.jpg">      
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/third-small.jpg">      
                     <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     </p>
                 </div>
                 <div class="s-12 m-6 l-3">
-                    <img src="img/fourth-small.jpg">      
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/fourth-small.jpg">      
                     <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     </p>
                 </div>
