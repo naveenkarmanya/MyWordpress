@@ -11,16 +11,16 @@
                 <div class="">
                     <div class="content-block margin-bottom">
                         <i  class="icon-at icon2x"></i>
-                       
-                                    <?php while ( have_posts() ) : the_post(); ?>
-                        <li><a href="<?php the_permalink(); ?>"><p><?php the_content(); ?></p></a></li>
-                       
-				<?php endwhile; ?>
-                            
+
+                        <?php while (have_posts()) : the_post(); ?>
+                            <li><a href="<?php the_permalink(); ?>"><p><?php the_content(); ?></p></a></li>
+
+                        <?php endwhile; ?>
+
                     </div>
                 </div>
-               
-                
+
+
             </div>
         </div>
     </div>
@@ -118,3 +118,8 @@
 </script> 
 </body>
 </html>
+
+
+
+
+
