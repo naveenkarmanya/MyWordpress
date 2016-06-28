@@ -8,139 +8,19 @@
     <div id="content">
         <div class="line">
             <div class="margin">
-                <div class="s-12 m-6 l-4">
+                <div class="">
                     <div class="content-block margin-bottom">
                         <i  class="icon-at icon2x"></i>
-                        <?php
-                            wp_nav_menu(array(
-                                'theme_location' => 'ternary',
-                                'container' => 'false',
-                               ));
-                            ?>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                            </p>
+                       
+                                    <?php while ( have_posts() ) : the_post(); ?>
+                        <li><a href="<?php the_permalink(); ?>"><p><?php the_content(); ?></p></a></li>
+                       
+				<?php endwhile; ?>
+                            
                     </div>
                 </div>
-                <div class="s-12 m-6 l-4">
-                    <div class="content-block margin-bottom">
-                        <i class="icon-cloud icon2x"></i>
-                        <?php
-                            $newpost = new WP_Query('post.php?post=91&action=edit');
-                            if ($newpost->have_posts()) :
-
-                                while ($newpost->have_posts()) :
-                                    $newpost->the_post();
-                                    ?>
-                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
-
-
-                                    <?php
-                                endwhile;
-
-                            else :
-
-                            endif;
-                            ?>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        </p>
-                    </div>
-                </div>
-                <div class="s-12 m-6 l-4">
-                    <div class="content-block margin-bottom">
-                        <i class="icon-heart icon2x"></i>
-                        <?php
-                            $newpost = new WP_Query('post=91');
-                            if ($newpost->have_posts()) :
-
-                                while ($newpost->have_posts()) :
-                                    $newpost->the_post();
-                                    ?>
-                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
-
-
-                                    <?php
-                                endwhile;
-
-                            else :
-
-                            endif;
-                            ?>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        </p>
-                    </div>
-                </div>
-                <div class="s-12 m-6 l-4">
-                    <div class="content-block margin-bottom">
-                        <i class="icon-plus icon2x"></i>
-                       <?php
-                            $newpost = new WP_Query('post.php?post=91&action=edit');
-                            if ($newpost->have_posts()) :
-
-                                while ($newpost->have_posts()) :
-                                    $newpost->the_post();
-                                    ?>
-                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
-
-
-                                    <?php
-                                endwhile;
-
-                            else :
-
-                            endif;
-                            ?>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        </p>
-                    </div>
-                </div>
-                <div class="s-12 m-6 l-4">
-                    <div class="content-block margin-bottom">
-                        <i class="icon-warning icon2x"></i>
-                        <?php
-                            $newpost = new WP_Query('post.php?post=91&action=edit');
-                            if ($newpost->have_posts()) :
-
-                                while ($newpost->have_posts()) :
-                                    $newpost->the_post();
-                                    ?>
-                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
-
-
-                                    <?php
-                                endwhile;
-
-                            else :
-
-                            endif;
-                            ?>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        </p>
-                    </div>
-                </div>
-                <div class="s-12 m-6 l-4">
-                    <div class="content-block margin-bottom">
-                        <i class="icon-mail icon2x"></i>
-                        <?php
-                            $newpost = new WP_Query('post.php?post=91&action=edit');
-                            if ($newpost->have_posts()) :
-
-                                while ($newpost->have_posts()) :
-                                    $newpost->the_post();
-                                    ?>
-                                    <li><a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a></li>
-
-
-                                    <?php
-                                endwhile;
-
-                            else :
-
-                            endif;
-                            ?>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        </p>
-                    </div>
-                </div>
+               
+                
             </div>
         </div>
     </div>
