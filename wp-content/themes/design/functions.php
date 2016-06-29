@@ -13,14 +13,21 @@
 
 function MyWebSite_script_enqueue() {
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.4', 'all');
-   
-    	wp_enqueue_style( 'naturo_lite-nivoslider-style', get_template_directory_uri().'/css/nivo-slider.css' );
-	wp_enqueue_style( 'naturo_lite-main-style', get_template_directory_uri().'/css/responsive.css' );		
-	wp_enqueue_style( 'naturo_lite-base-style', get_template_directory_uri().'/css/style_base.css' );
-	wp_enqueue_script( 'naturo_lite-nivo-script', get_template_directory_uri() . '/js/jquery.nivo.slider.js', array('jquery') );
+    wp_enqueue_style('customcss', get_template_directory_uri() . '/css/components.css', array(), '3.3.4', 'all');
+
+    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/responsee.css', array(), '3.3.4', 'all');
+    wp_enqueue_style('customcss1', get_template_directory_uri() . '/owl-carousel/owl.carousel.css', array(), '3.3.4', 'all');
+    wp_enqueue_style('customcss2', get_template_directory_uri() . '/owl-carousel/owl.theme.css', array(), '3.3.4', 'all');
+    wp_enqueue_style('customcss3', get_template_directory_uri() . '/css/template-style.css', array(), '3.3.4', 'all');
+
     wp_enqueue_script('jquery');
+    wp_enqueue_script('customjs1', get_template_directory_uri() . '/js/jquery-1.8.3.min.js', array('jquery'));
+    wp_enqueue_script('customjs2', get_template_directory_uri() . '/js/jquery-ui.min.js', array('jquery'));
+    wp_enqueue_script('customjs3', get_template_directory_uri() . '/js/modernizr.js', array('jquery'));
+    wp_enqueue_script('customjs4', get_template_directory_uri() . '/js/responsee.js', array('jquery'));
+    wp_enqueue_script('customjs5', get_template_directory_uri() . '/owl-carousel/owl.carousel.js', array('jquery'));
+    wp_enqueue_script('customjs6', get_template_directory_uri() . '/js/carousel.js', array('jquery'));
     wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
-    
 }
 
 add_action('wp_enqueue_scripts', 'MyWebSite_script_enqueue');
@@ -172,7 +179,6 @@ function mywebsite_sidebar() {
 
 add_action('widgets_init', 'mywebsite_sidebar');
 
-
 function prowp_register_my_post_types() {
     register_post_type('terminals', array(
         'labels' => array(
@@ -200,3 +206,33 @@ function prowp_register_my_post_types() {
 }
 
 add_action('init', 'prowp_register_my_post_types');
+
+function wpb_widgets_init() {
+
+    register_sidebar(array(
+        'name' => __('Main Sidebar', 'wpb'),
+        'id' => 'sidebar-0',
+        'description' => __('The main sidebar appears on the right on each page except the front page template', 'wpb'),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+
+    register_sidebar(array(
+        register_sidebar(array(
+            'name' => __('Front page sidebar', 'wpb'),
+            'id' => 'sidebar-01',
+            'description' => __('Appears on the static front page template', 'wpb'),
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ))
+    ));
+}
+
+add_action('widgets_init', 'wpb_widgets_init');
+
+
+add_action('widgets_init', 'sydney_widgets_init');
