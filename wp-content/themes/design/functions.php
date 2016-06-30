@@ -179,33 +179,6 @@ function mywebsite_sidebar() {
 
 add_action('widgets_init', 'mywebsite_sidebar');
 
-function prowp_register_my_post_types() {
-    register_post_type('terminals', array(
-        'labels' => array(
-            'name' => 'Terminals',
-            'singular_name' => 'Terminal',
-            'add_new' => 'Add New Terminal',
-            'add_new_item' => 'Add New Terminal',
-            'edit_item' => 'Edit Terminal',
-            'new_item' => 'New Terminal',
-            'all_items' => 'All Terminals',
-            'view_item' => 'View Terminal',
-            'search_items' => 'Search Terminals',
-            'not_found' => 'No Terminals found',
-            'not_found_in_trash' => 'No Terminals found in Trash',
-            'parent_item_colon' => '',
-            'menu_name' => 'Terminals'
-        ),
-        'public' => true,
-        'has_archive' => true,
-        'taxonomies' => array('category'),
-        'rewrite' => array('slug' => 'terminal'),
-        'supports' => array('title', 'editor', 'author', 'thumbnail', 'comments')
-            )
-    );
-}
-
-add_action('init', 'prowp_register_my_post_types');
 
 function wpb_widgets_init() {
 
@@ -235,4 +208,4 @@ function wpb_widgets_init() {
 add_action('widgets_init', 'wpb_widgets_init');
 
 
-add_action('widgets_init', 'sydney_widgets_init');
+
