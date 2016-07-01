@@ -17,3 +17,5 @@ if (!defined('ABSPATH')) {
 require_once(plugin_dir_path(__FILE__) . 'custom-plugin-content.php');
 require_once(plugin_dir_path(__FILE__) . 'custom-render-admin.php');
 require_once(plugin_dir_path(__FILE__) . 'custom-meta-box-new.php');
+require_once(plugin_dir_path(__FILE__) . 'custom-create-shortcode.php');
+require_once(plugin_dir_path(__FILE__) . 'custom-action-hooks-sample.php');

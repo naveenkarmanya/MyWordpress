@@ -83,11 +83,11 @@
     <!-- GALLERY --> 	
     <div id="third-block">
         <div class="line">
-            <h2> <?php if (is_active_sidebar('sidebar-01')) : ?>
+            <?php if (is_active_sidebar('sidebar-01')) : ?>
                     <div id="secondary" class="widget-area" role="complementary">
-                        <h6><?php dynamic_sidebar('sidebar-01'); ?></h6>
+                        <?php dynamic_sidebar('sidebar-01'); ?>
                     </div>
-                <?php endif; ?></h2>
+                <?php endif; ?>
 
         </div>
     </div>
