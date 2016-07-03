@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<!--<div class="row">
+<div class="row">
     <div class="col-xs-12 col-sm-8">
 
 
@@ -7,26 +7,27 @@
             <?php the_post_thumbnail('thumbnail'); ?>
 
         </div>
-        
-            <?php
-            //$newpost = new WP_Query('page id=131');
-            if (have_posts()) :
 
-                while (have_posts()) :
-                    the_post();
-                    ?>
-                    <?php get_template_part('content', get_post_format()); ?>
-                    <hr>
-                    <?php
-                endwhile;
+        <?php
+        $newpost = new WP_Query('page id=131');
+        if ($newpost->have_posts()) :
 
-            else :
+            while ($newpost->have_posts()) :
+                the_post();
+                ?>
+                <?php the_title(); ?>
+                <?php get_template_part('content', get_post_format()); ?>
+                <hr>
+                <?php
+            endwhile;
 
-            endif;
-            ?>
-       
+        else :
+
+        endif;
+        ?>
+
     </div>
--->
+
 
     <div class="col-xs-12 col-sm-4">
         <?php get_sidebar(); ?>
