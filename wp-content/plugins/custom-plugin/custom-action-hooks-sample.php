@@ -31,9 +31,9 @@ function dwwp_action_hooks_hooks() {
 
 add_action('wp_before_admin_bar_render', 'dwwp_action_hooks_hooks');
 
-function dwwp_change_icon($plural) {
-    $plural['name'] = 'naveen';
-    return $args;
-}
-
-add_filter('dwwp_post_type_args', 'dwwp_change_icon');
+//function dwwp_change_icon($plural) {
+//    $plural['name'] = 'naveen';
+//    return $args;
+//}
+//
+//add_filter('dwwp_post_type_args', 'dwwp_change_icon');

@@ -6,11 +6,10 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
 }
 
-function dwwp_change_icon($plural) {
-    $plural['name'] = 'naveen';
+function dwwp_change_icon($args) {
+    $args['menu-icon'] = 'dashicons-admin-multisite';
     return $args;
 }
 
-add_filter('dwwp_post_type_args', 'dwwp_change_icon');
+add_filter('prowp_register_my_post_types', 'dwwp_change_icon');
 
-?>

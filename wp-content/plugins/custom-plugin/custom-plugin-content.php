@@ -16,13 +16,14 @@ function prowp_register_my_post_types() {
             'not_found_in_trash' => 'No Terminals found in Trash',
             'parent_item_colon'  => '',
             'menu_name'          => 'Terminals',
+           
         ),
         'public'        => true,
         'menu_icon'     => 'dashicons-admin-site',
         'has_archive'   => true,
         'taxonomies'    => array('category'),
         'rewrite'       => array(
-            'slug'      => 'gallery',
+            'slug'      => 'terminal',
             'pages'     => true,
         ),
         'supports' => array(

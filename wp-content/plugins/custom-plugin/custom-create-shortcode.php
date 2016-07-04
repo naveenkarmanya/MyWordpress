@@ -27,6 +27,6 @@ function dwwp_shortcode_callback($atts, $content = NULL) {
     return '<h1>' . $atts['title'] . '</h1>';
 }
 
-add_shortcode('custom_shortcode', 'dwwp_shortcode_callback');
+add_shortcode('code_shortcode', 'dwwp_shortcode_callback');
 
 
